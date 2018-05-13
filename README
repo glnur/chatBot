@@ -1,0 +1,5 @@
+1. Install all the requirements from billy_the_messenger/requirements.txt
+2. Run in terminal setup.*
+3. Now you can test your bot by running:
+python execute.py
+4.[optional] If you want to train your bot, go to seq2seq.ini and change test Mode to train.
