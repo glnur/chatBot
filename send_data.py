@@ -13,8 +13,8 @@ for line in f:
     break
 number = neededFile[1]
 
-s = socket.socket()         # Create a socket object
-host = socket.gethostname() # Get local machine name
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
+host = "5.101.179.23" # Get local machine name
 port = 8184                 # Reserve a port for your service.
 
 index = "seq2seq.ckpt-" + number + "index"
@@ -34,4 +34,4 @@ for file in workFiles:
     print "Done Sending"
     print s.recv(1024)
 s.shutdown(socket.SHUT_WR)
-s.close                     # Close the socket when done
+s.close()                     # Close the socket when done

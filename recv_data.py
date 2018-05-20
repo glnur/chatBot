@@ -5,9 +5,9 @@ data = "seq2seq.ckpt-test.data-00000-of-00001"
 meta = "seq2seq.ckpt-test.meta"
 workFiles = ["vocab20000.enc", "vocab20000.dec", "checkpoint", index, data, meta]
 
-s = socket.socket()         # Create a socket object
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
 host = socket.gethostname() # Get local machine name
-port = 12345                 # Reserve a port for your service.
+port = 8184                 # Reserve a port for your service.
 s.bind((host, port))        # Bind to the port
 s.listen(5)                 # Now wait for client connection.
 while True:
